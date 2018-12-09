@@ -14,7 +14,7 @@
 		<source src="audio/4-17 Dearly Beloved -Reprise-.mp3" type="audio/mpeg">
 	</audio>
 
-	<div class="fullscreen" style="pointer-events:none">
+	<div id="body" class="fullscreen" style="pointer-events:none">
 		<video autoplay playsinline muted loop id="video" class="fullscreen-video" style="pointer-events:none" poster="videos/kh3poster.png">
 			<source id="source" src="videos/kh3.mp4" type="video/mp4">
 		</video>
@@ -70,31 +70,30 @@
 		}
 	}
 
-	window.addEventListener("touchStart",function(event) {
+	window.addEventListener("touchstart",function(event) {
 		if(event.touches.length === 1) {
-      start = event.touches.item(0).clientX;
+			start = event.touches.item(0).clientX;
     }
 		else {
     	start = null;
     }
   });
 
-	window.addEventListener("touchEnd",function(event) {
-    var offset = 100;
-    if(start){
-      var end = event.changedTouches.item(0).clientX;
+	window.addEventListener("touchend",function(event) {
+		var offset = 100;
+
+    if(start) {
+			var end = event.changedTouches.item(0).clientX;
 			//right to left swipe
 			if(end < start - offset ) {
-				index++;
-				change(index);
+				next();
 			}
 			//left to right swipe
       if(end > start + offset) {
-      	index--;
-				change(index);
+				prev();
       }
     }
-  });
+	});
 
 	function change(n) {
 		switch(index) {
