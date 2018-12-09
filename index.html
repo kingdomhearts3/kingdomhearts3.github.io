@@ -9,7 +9,7 @@
 	<title>Kingdom Hearts 3 Countdown</title>
 </head>
 
-<body>
+<body onload="onStart()">
 	<audio autoplay loop>
 		<source src="audio/4-17 Dearly Beloved -Reprise-.mp3" type="audio/mpeg">
 	</audio>
@@ -42,6 +42,11 @@
 	<script>
 	var index = 1;
 	var interval;
+	var start = null;
+
+	function onStart(){
+		document.getElementById("video").load();
+	}
 
 	function next(){
 		if (index < 8) {
@@ -53,6 +58,43 @@
 			change(index);
 		}
 	}
+
+	function prev(){
+		if (index > 1) {
+			index--;
+			change(index);
+		}
+		else {
+			index = 8;
+			change(index);
+		}
+	}
+
+	window.addEventListener("touchStart",function(event) {
+		if(event.touches.length === 1) {
+      start = event.touches.item(0).clientX;
+    }
+		else {
+    	start = null;
+    }
+  });
+
+	window.addEventListener("touchEnd",function(event) {
+    var offset = 100;
+    if(start){
+      var end = event.changedTouches.item(0).clientX;
+			//right to left swipe
+			if(end < start - offset ) {
+				index++;
+				change(index);
+			}
+			//left to right swipe
+      if(end > start + offset) {
+      	index--;
+				change(index);
+      }
+    }
+  });
 
 	function change(n) {
 		switch(index) {
