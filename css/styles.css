@@ -1,0 +1,131 @@
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#gradient {
+    position: fixed;
+    z-index: 3;
+    right: 0; bottom: 0; left: 0;
+    height: 300px;
+    background: none;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 78%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(78%,rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 78%);
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 78%);
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 78%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 78%);
+    display: block;
+}
+
+.content-container {
+	position: fixed;
+	z-index: 4;
+	background-image: url("../background/background2.png");
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: center 7%;
+	bottom: 0;
+	width: 100%;
+	display: block;
+}
+
+.section-header {
+	width: 100%;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	background-image: url("../background/header-separator.png");
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+.crown {
+	background-image: url("../background/header-crown.png");
+	background-size: auto;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	min-height: 70px;
+	position: relative;
+	display: block;
+}
+
+.prev-arrow, .next-arrow {
+	position: fixed;
+	width: 27px;
+	height: 26px;
+	bottom: 11px;
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 99;
+	cursor: pointer;
+}
+
+.prev-arrow {
+	background-image: url("../icons/previous.png");
+	left: 5%;
+}
+
+.next-arrow {
+	background-image: url("../icons/next.png");
+	right: 5%;
+}
+
+span {
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: 'Open Sans', Arial, sans-serif;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	bottom: 0;
+	display: inline-block;
+	margin: 0 auto;
+	line-height: 48px;
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+#info {
+	font-size: 16px;
+}
+
+.fullscreen {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -100;
+}
+
+.fullscreen-video {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+	.fullscreen-bg {
+		background: url("../videos/kh3poster.png");
+	}
+
+	.fullscreen-bg_video {
+		display: none;
+	}
+}
