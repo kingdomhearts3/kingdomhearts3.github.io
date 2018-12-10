@@ -6,7 +6,6 @@ function onStart(){
   //document.getElementById("video").load();
 }
 
-
 function next(){
   if (index < 8) {
     index++;
@@ -39,7 +38,7 @@ window.addEventListener("touchstart",function(event) {
 });
 
 window.addEventListener("touchend",function(event) {
-  var offset = 300;
+  var offset = 100;
 
   if(start) {
     var end = event.changedTouches.item(0).clientX;
@@ -197,8 +196,8 @@ var date = new Date("jan 29, 2019 00:00:00").getTime();
 function getCountdown() {
   var currentTime = new Date().getTime();
   var distance = date - currentTime;
-  var d = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var days = convertRoman(d);
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  //var days = convertRoman(d);
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
@@ -215,7 +214,7 @@ function getCountdown() {
     seconds = "0" + seconds;
   }
 
-  document.getElementById("countdown").innerHTML = days + " " + hours + ":" + minutes + ":" + seconds;
+  document.getElementById("countdown").innerHTML = days + " DAYS " + hours + ":" + minutes + ":" + seconds;
 
   if (distance <= 0) {
     clearInterval(x);
@@ -224,6 +223,7 @@ function getCountdown() {
   }
 }
 
+/*
 function convertRoman(num) {
     var result = '';
     var decimal = [100, 90, 50, 40, 10, 9, 5, 4, 1];
@@ -238,3 +238,4 @@ function convertRoman(num) {
     }
   return result;
   }
+  */
