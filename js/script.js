@@ -56,22 +56,22 @@ window.addEventListener("touchend",function(event) {
 function change(n) {
   switch(index) {
     case 1:
+      document.getElementById("countdown").style.display = "initial";
+      document.getElementById("info").style.display = "none";
       document.getElementById("video").poster = "videos/kh3poster.png";
       document.getElementById("source").src = "videos/kh3.mp4";
-      document.getElementById("video").load();
       document.getElementById("audio").pause();
-      document.getElementById("info").style.display = "none";
-      document.getElementById("countdown").style.display = "initial";
+      document.getElementById("video").load();
       break;
     case 2:
-      document.getElementById("video").poster = "videos/khposter.png";
-      document.getElementById("source").src = "videos/kh.mp4";
-      document.getElementById("video").load();
-      document.getElementById("audio").src = "audio/Dearly Beloved - KINGDOM HEARTS.mp3";
-      document.getElementById("audio").play();
       document.getElementById("countdown").style.display = "none";
       document.getElementById("info").style.display = "initial";
       document.getElementById("info").innerHTML = "kingdom hearts";
+      document.getElementById("audio").src = "audio/Dearly Beloved - KINGDOM HEARTS.mp3";
+      document.getElementById("video").poster = "videos/khposter.png";
+      document.getElementById("source").src = "videos/kh.mp4";
+      document.getElementById("audio").play();
+      document.getElementById("video").load();
 
       clearInterval(interval);
       interval = setInterval(function()	{
@@ -84,12 +84,12 @@ function change(n) {
       }, 7000);
       break;
     case 3:
+      document.getElementById("info").innerHTML = "chain of memories";
+      document.getElementById("audio").src = "audio/Dearly Beloved - KINGDOM HEARTS.mp3";
       document.getElementById("video").poster = "videos/khcomposter.png";
       document.getElementById("source").src = "videos/khcom.mp4";
-      document.getElementById("video").load();
-      document.getElementById("audio").src = "audio/Dearly Beloved - KINGDOM HEARTS.mp3";
       document.getElementById("audio").play();
-      document.getElementById("info").innerHTML = "chain of memories";
+      document.getElementById("video").load();
 
       clearInterval(interval);
       interval = setInterval(function()	{
@@ -102,12 +102,12 @@ function change(n) {
       }, 7000);
       break;
     case 4:
+      document.getElementById("info").innerHTML = "kingdom hearts II";
+      document.getElementById("audio").src = "audio/Dearly Beloved - KINGDOM HEARTS 2.mp3";
       document.getElementById("video").poster = "videos/kh2poster.png";
       document.getElementById("source").src = "videos/kh2.mp4";
-      document.getElementById("video").load();
-      document.getElementById("audio").src = "audio/Dearly Beloved - KINGDOM HEARTS 2.mp3";
       document.getElementById("audio").play();
-      document.getElementById("info").innerHTML = "kingdom hearts II";
+      document.getElementById("video").load();
 
       clearInterval(interval);
       interval = setInterval(function()	{
@@ -120,12 +120,12 @@ function change(n) {
       }, 7000);
       break;
     case 5:
+      document.getElementById("info").innerHTML = "358/2 days";
+      document.getElementById("audio").src = "audio/Dearly Beloved - 358 DAYS.mp3";
       document.getElementById("video").poster = "videos/kh358daysposter.png";
       document.getElementById("source").src = "videos/kh358days.mp4";
-      document.getElementById("video").load();
-      document.getElementById("audio").src = "audio/Dearly Beloved - 358 DAYS.mp3";
       document.getElementById("audio").play();
-      document.getElementById("info").innerHTML = "358/2 days";
+      document.getElementById("video").load();
 
       clearInterval(interval);
       interval = setInterval(function()	{
@@ -138,13 +138,13 @@ function change(n) {
       }, 7000);
       break;
     case 6:
-      document.getElementById("video").poster = "videos/khbbsposter.png";
-      document.getElementById("source").src = "videos/khbbs.mp4";
-      document.getElementById("video").load();
-      document.getElementById("audio").src = "audio/Dearly Beloved - BIRTH BY SLEEP.mp3";
-      document.getElementById("audio").play();
       document.getElementById("info").style = "font-size: 16px";
       document.getElementById("info").innerHTML = "birth by sleep";
+      document.getElementById("audio").src = "audio/Dearly Beloved - BIRTH BY SLEEP.mp3";
+      document.getElementById("video").poster = "videos/khbbsposter.png";
+      document.getElementById("source").src = "videos/khbbs.mp4";
+      document.getElementById("audio").play();
+      document.getElementById("video").load();
 
       clearInterval(interval);
       interval = setInterval(function()	{
@@ -157,13 +157,13 @@ function change(n) {
       }, 7000);
       break;
     case 7:
-      document.getElementById("video").poster = "videos/kh3dposter.png";
-      document.getElementById("source").src = "videos/kh3d.mp4";
-      document.getElementById("video").load();
-      document.getElementById("audio").src = "audio/Dearly Beloved - 3D.mp3";
-      document.getElementById("audio").play();
       document.getElementById("info").style = "font-size: 14px";
       document.getElementById("info").innerHTML = "dream drop distance";
+      document.getElementById("audio").src = "audio/Dearly Beloved - 3D.mp3";
+      document.getElementById("video").poster = "videos/kh3dposter.png";
+      document.getElementById("source").src = "videos/kh3d.mp4";
+      document.getElementById("audio").play();
+      document.getElementById("video").load();
 
       clearInterval(interval);
       interval = setInterval(function()	{
@@ -176,15 +176,15 @@ function change(n) {
       }, 7000);
       break;
     case 8:
-      document.getElementById("video").poster = "videos/khfcpposter.png";
-      document.getElementById("source").src = "videos/khfcp.mp4";
-      document.getElementById("video").load();
-      document.getElementById("audio").src = "audio/Dearly Beloved - BIRTH BY SLEEP.mp3";
-      document.getElementById("audio").play();
       document.getElementById("countdown").style.display = "none";
       document.getElementById("info").style.display = "initial";
       document.getElementById("info").style = "font-size: 16px";
       document.getElementById("info").innerHTML = "0.2 Birth by Sleep";
+      document.getElementById("audio").src = "audio/Dearly Beloved - BIRTH BY SLEEP.mp3";
+      document.getElementById("video").poster = "videos/khfcpposter.png";
+      document.getElementById("source").src = "videos/khfcp.mp4";
+      document.getElementById("audio").play();
+      document.getElementById("video").load();
 
       clearInterval(interval);
       interval = setInterval(function()	{
