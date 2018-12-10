@@ -7,7 +7,7 @@ function onStart(){
 }
 
 function next(){
-  if (index < 8) {
+  if (index < 9) {
     index++;
     change(index);
   }
@@ -23,7 +23,7 @@ function prev(){
     change(index);
   }
   else {
-    index = 8;
+    index = 9;
     change(index);
   }
 }
@@ -138,7 +138,6 @@ function change(n) {
       }, 7000);
       break;
     case 6:
-      document.getElementById("info").style = "font-size: 16px";
       document.getElementById("info").innerHTML = "birth by sleep";
       document.getElementById("audio").src = "audio/Dearly Beloved - BIRTH BY SLEEP.mp3";
       document.getElementById("video").poster = "videos/khbbsposter.png";
@@ -157,6 +156,25 @@ function change(n) {
       }, 7000);
       break;
     case 7:
+      document.getElementById("info").style = "font-size: 16px";
+      document.getElementById("info").innerHTML = "Re:coded";
+      document.getElementById("audio").src = "audio/Dearly Beloved - RECODED.mp3";
+      document.getElementById("video").poster = "videos/khrecodedposter.png";
+      document.getElementById("source").src = "videos/khrecoded.mp4";
+      document.getElementById("audio").play();
+      document.getElementById("video").load();
+
+      clearInterval(interval);
+      interval = setInterval(function()	{
+        if (document.getElementById("info").innerHTML === "Re:coded") {
+            document.getElementById("info").innerHTML = "jan 11, 2011";
+        }
+        else {
+          document.getElementById("info").innerHTML = "Re:coded";
+        }
+      }, 7000);
+      break;
+    case 8:
       document.getElementById("info").style = "font-size: 14px";
       document.getElementById("info").innerHTML = "dream drop distance";
       document.getElementById("audio").src = "audio/Dearly Beloved - 3D.mp3";
@@ -175,7 +193,7 @@ function change(n) {
         }
       }, 7000);
       break;
-    case 8:
+    case 9:
       document.getElementById("countdown").style.display = "none";
       document.getElementById("info").style.display = "initial";
       document.getElementById("info").style = "font-size: 16px";
