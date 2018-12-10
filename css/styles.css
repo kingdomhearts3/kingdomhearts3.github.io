@@ -121,7 +121,23 @@ span {
 	transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width:600px) {
+	.section-header {
+		background-position: center 77%;
+	}
+}
+
+@media screen and (min-width:1280px) {
+	.crown {
+		background-image: url("../background/header-separator2.png");
+	}
+	.section-header {
+		background-image: url("");
+	}
+}
+
 @media (max-width: 767px) {
+
 	.fullscreen-bg {
 		background: url("../videos/kh3poster.png");
 	}
