@@ -7,7 +7,7 @@ function onStart(){
 }
 
 function next(){
-  if (index < 9) {
+  if (index < 10) {
     index++;
     change(index);
   }
@@ -23,7 +23,7 @@ function prev(){
     change(index);
   }
   else {
-    index = 9;
+    index = 10;
     change(index);
   }
 }
@@ -69,7 +69,7 @@ function change(n) {
       document.getElementById("info").innerHTML = "kingdom hearts";
       document.getElementById("audio").src = "audio/Dearly Beloved - KINGDOM HEARTS.mp3";
       document.getElementById("video").poster = "videos/kh.png";
-      document.getElementById("source").src = "videos/kh(1).mp4";
+      document.getElementById("source").src = "videos/kh.mp4";
       document.getElementById("audio").play();
       document.getElementById("video").load();
 
@@ -194,9 +194,27 @@ function change(n) {
       }, 7000);
       break;
     case 9:
+      document.getElementById("info").style = "font-size: 16px";
+      document.getElementById("info").innerHTML = "union x";
+      document.getElementById("audio").src = "audio/Dearly Beloved - UNION X.mp3";
+      document.getElementById("video").poster = "videos/khunionx.png";
+      document.getElementById("source").src = "videos/khunionx.mp4";
+      document.getElementById("audio").play();
+      document.getElementById("video").load();
+
+      clearInterval(interval);
+      interval = setInterval(function()	{
+        if (document.getElementById("info").innerHTML === "union x") {
+            document.getElementById("info").innerHTML = "apr 7, 2016";
+        }
+        else {
+          document.getElementById("info").innerHTML = "union x";
+        }
+      }, 7000);
+      break;
+    case 10:
       document.getElementById("countdown").style.display = "none";
       document.getElementById("info").style.display = "initial";
-      document.getElementById("info").style = "font-size: 16px";
       document.getElementById("info").innerHTML = "0.2 Birth by Sleep";
       document.getElementById("audio").src = "audio/Dearly Beloved - BIRTH BY SLEEP.mp3";
       document.getElementById("video").poster = "videos/khfcp.png";
@@ -248,6 +266,13 @@ function getCountdown() {
   }
 
   document.getElementById("countdown").innerHTML = days + " DAYS " + hours + ":" + minutes + ":" + seconds;
+
+  if (days == 1) {
+    document.getElementById("countdown").innerHTML = days + " DAY " + hours + ":" + minutes + ":" + seconds;
+  }
+  else if (days == 0) {
+    document.getElementById("countdown").innerHTML = hours + ":" + minutes + ":" + seconds;
+  }
 
   if (distance <= 0) {
     clearInterval(x);
