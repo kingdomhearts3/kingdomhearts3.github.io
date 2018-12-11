@@ -85,7 +85,7 @@ function change(n) {
       break;
     case 3:
       document.getElementById("info").innerHTML = "chain of memories";
-      document.getElementById("audio").src = "audio/Dearly Beloved - KINGDOM HEARTS.mp3";
+      document.getElementById("audio").src = "audio/Dearly Beloved - COM.mp3";
       document.getElementById("video").poster = "videos/khcom.png";
       document.getElementById("source").src = "videos/khcom.mp4";
       document.getElementById("audio").play();
