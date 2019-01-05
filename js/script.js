@@ -55,6 +55,7 @@ window.addEventListener("touchend",function(event) {
 
 function change(n) {
   switch(index) {
+    default:
     case 1:
       document.getElementById("countdown").style.display = "initial";
       document.getElementById("info").style.display = "none";
